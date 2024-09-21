@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>701</width>
+    <height>283</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Quản Lý Bán Hàng</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QFrame" name="sidebar">
+      <property name="styleSheet">
+       <string>
+        QFrame {
+            background-color: #007AFF;
+            color: white;
+        }
+        QPushButton {
+            background-color: #007AFF;
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+        QPushButton:hover {
+            background-color: #005bb5;
+        }
+       </string>
+      </property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <item>
+        <widget class="QPushButton" name="btnHome">
+         <property name="text">
+          <string>Trang Chủ</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnProductManagement">
+         <property name="text">
+          <string>Quản Lý Sản Phẩm</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSales">
+         <property name="text">
+          <string>Doanh Số</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="mainContent">
+      <property name="styleSheet">
+       <string>
+        QFrame {
+            background-color: #f0f4f8;
+        }
+       </string>
+      </property>
+      <layout class="QVBoxLayout" name="mainLayoutContent">
+       <item>
+        <widget class="QLabel" name="lblWelcome">
+         <property name="styleSheet">
+          <string>
+           QLabel {
+               font-size: 24px;
+               color: #333;
+           }
+          </string>
+         </property>
+         <property name="text">
+          <string>Chào Mừng Đến Với Hệ Thống Quản Lý Bán Hàng</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="summaryFrame">
+         <layout class="QHBoxLayout" name="summaryLayout">
+          <item>
+           <widget class="QLabel" name="lblTotalSales">
+            <property name="text">
+             <string>Tổng Doanh Thu: 0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblTotalProducts">
+            <property name="text">
+             <string>Tổng Sản Phẩm: 0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

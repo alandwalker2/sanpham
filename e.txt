@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="6.0">
+ <class>RevenueStatistics</class>
+ <widget class="QWidget" name="RevenueStatistics">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Doanh Thu - Thống Kê</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBoxChart">
+     <property name="title">
+      <string>Biểu Đồ Doanh Thu</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayoutChart">
+      <item>
+       <widget class="QWidget" name="chartWidget">
+        <property name="sizePolicy">
+         <sizepolicy>
+          <horizontalPolicy>Preferred</horizontalPolicy>
+          <verticalPolicy>Preferred</verticalPolicy>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBoxStatistics">
+     <property name="title">
+      <string>Bảng Thống Kê</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayoutStatistics">
+      <item>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="rowCount">
+         <number>5</number>
+        </property>
+        <property name="columnCount">
+         <number>4</number>
+        </property>
+        <column>
+         <property name="text">
+          <string>Ngày</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Doanh Thu</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Chi Phí</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Lợi Nhuận</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="controlWidget">
+     <layout class="QHBoxLayout" name="horizontalLayoutControls">
+      <item>
+       <widget class="QPushButton" name="buttonDay">
+        <property name="text">
+         <string>Ngày</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonWeek">
+        <property name="text">
+         <string>Tuần</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonMonth">
+        <property name="text">
+         <string>Tháng</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
