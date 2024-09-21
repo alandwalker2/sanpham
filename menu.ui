@@ -536,7 +536,7 @@
           <string notr="true"/>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>4</number>
          </property>
          <widget class="QWidget" name="page">
           <widget class="QLabel" name="lblWelcome">
@@ -788,9 +788,9 @@ color:white;}</string>
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>60</y>
-             <width>411</width>
-             <height>411</height>
+             <y>70</y>
+             <width>671</width>
+             <height>391</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -799,6 +799,18 @@ color:white;}</string>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777214</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="autoFillBackground">
             <bool>false</bool>
            </property>
@@ -806,7 +818,10 @@ color:white;}</string>
             <enum>QAbstractScrollArea::AdjustToContents</enum>
            </property>
            <property name="selectionMode">
-            <enum>QAbstractItemView::ExtendedSelection</enum>
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectItems</enum>
            </property>
            <property name="verticalScrollMode">
             <enum>QAbstractItemView::ScrollPerItem</enum>
@@ -815,13 +830,13 @@ color:white;}</string>
             <enum>Qt::SolidLine</enum>
            </property>
            <property name="rowCount">
-            <number>5</number>
+            <number>10</number>
            </property>
            <property name="columnCount">
             <number>5</number>
            </property>
            <attribute name="horizontalHeaderVisible">
-            <bool>true</bool>
+            <bool>false</bool>
            </attribute>
            <attribute name="horizontalHeaderCascadingSectionResizes">
             <bool>true</bool>
@@ -852,6 +867,11 @@ color:white;}</string>
            <row/>
            <row/>
            <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
+           <row/>
            <column>
             <property name="text">
              <string>Tên sản phẩm</string>
@@ -871,6 +891,20 @@ color:white;}</string>
             <property name="text">
              <string>Giá</string>
             </property>
+            <property name="font">
+             <font>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
+            <property name="foreground">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </property>
            </column>
            <column>
             <property name="text">
@@ -888,13 +922,13 @@ color:white;}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>421</width>
-             <height>58</height>
+             <width>691</width>
+             <height>66</height>
             </rect>
            </property>
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
             <item>
-             <widget class="QLabel" name="label_6">
+             <widget class="QPushButton" name="pushButton_22">
               <property name="maximumSize">
                <size>
                 <width>40</width>
@@ -904,10 +938,32 @@ color:white;}</string>
               <property name="text">
                <string/>
               </property>
-              <property name="pixmap">
-               <pixmap>go-back-2.png</pixmap>
+              <property name="icon">
+               <iconset>
+                <normaloff>go-back-2.png</normaloff>go-back-2.png</iconset>
               </property>
-              <property name="scaledContents">
+              <property name="iconSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="autoRepeat">
+               <bool>false</bool>
+              </property>
+              <property name="autoExclusive">
+               <bool>false</bool>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
                <bool>true</bool>
               </property>
              </widget>
@@ -929,18 +985,75 @@ color:white;}</string>
             </item>
            </layout>
           </widget>
-          <widget class="QLabel" name="label_9">
+          <widget class="QWidget" name="widget_4" native="true">
            <property name="geometry">
             <rect>
-             <x>480</x>
-             <y>20</y>
-             <width>47</width>
-             <height>13</height>
+             <x>10</x>
+             <y>450</y>
+             <width>671</width>
+             <height>51</height>
             </rect>
            </property>
-           <property name="text">
-            <string>Tổng</string>
+           <property name="autoFillBackground">
+            <bool>false</bool>
            </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Tổng số tiền:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_2">
+              <property name="locale">
+               <locale language="Vietnamese" country="Vietnam"/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="dragEnabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <pointsize>20</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>VNĐ</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
          <widget class="QWidget" name="page_3">
@@ -1118,7 +1231,7 @@ color:white;}
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>20</y>
+             <y>30</y>
              <width>651</width>
              <height>471</height>
             </rect>
@@ -1308,18 +1421,49 @@ color:white;}
           </widget>
          </widget>
          <widget class="QWidget" name="page_5">
-          <widget class="QLabel" name="label_8">
+          <widget class="QTableWidget" name="productTable_3">
            <property name="geometry">
             <rect>
-             <x>180</x>
-             <y>110</y>
-             <width>47</width>
-             <height>13</height>
+             <x>20</x>
+             <y>100</y>
+             <width>601</width>
+             <height>281</height>
             </rect>
            </property>
-           <property name="text">
-            <string>CUS</string>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget {
+        border: 1px solid black; /* Viền ngoài của bảng */
+        gridline-color: black;   /* Màu của các đường lưới */
+    }
+QTableWidget::item {
+        border: 1px solid gray; /* Viền của các ô */
+    }</string>
            </property>
+           <column>
+            <property name="text">
+             <string>STT</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>SĐT</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>New Column</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Địa chỉ</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Yêu cầu</string>
+            </property>
+           </column>
           </widget>
          </widget>
         </widget>

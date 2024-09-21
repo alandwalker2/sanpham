@@ -7,7 +7,7 @@ from PyQt6.QtWidgets import QApplication
 class HomeWindow(QMainWindow):
     def __init__(self):
         super(HomeWindow, self).__init__()
-        loadUi("VieTravel.ui", self)
+        loadUi("menu.ui", self)
       
 # Define the main function
 def main():
