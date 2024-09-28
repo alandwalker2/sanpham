@@ -18,10 +18,11 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog#LoginDialog {
-    background-image: url(:/background/hinh-anh-cac-mon-an-ngon-nhan-lam-theo-yeu-cau-rieng.jpg);
+    background-image: url(D:\Desktop\APP\sanphamhinh-anh-cac-mon-an-ngon-nhan-lam-theo-yeu-cau-rieng.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
 }</string>
   </property>
   <widget class="QFrame" name="loginFrame">

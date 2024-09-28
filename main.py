@@ -2,13 +2,15 @@
 import sys
 from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import *
-from PyQt6.QtWidgets import QApplication
+from PyQt6.QtWidgets import QApplication,QDialog
 
-class HomeWindow(QMainWindow):
+class HomeWindow(QDialog):
     def __init__(self):
         super(HomeWindow, self).__init__()
-        loadUi("menu.ui", self)
-      
+        loadUi("log in.ui", self)
+
+        
+    
 # Define the main function
 def main():
     # Create an instance of the QApplication
