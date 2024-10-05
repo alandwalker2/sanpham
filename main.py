@@ -4,10 +4,10 @@ from PyQt6.uic import loadUi
 from PyQt6.QtWidgets import *
 from PyQt6.QtWidgets import QApplication,QDialog
 
-class HomeWindow(QDialog):
+class HomeWindow(QMainWindow):
     def __init__(self):
         super(HomeWindow, self).__init__()
-        loadUi("log in.ui", self)
+        loadUi("menu.ui", self)
 
         
     

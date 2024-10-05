@@ -595,7 +595,7 @@ QPushButton:checked{
           <string notr="true"/>
          </property>
          <property name="currentIndex">
-          <number>3</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="page">
           <layout class="QGridLayout" name="gridLayout_4">
@@ -1073,33 +1073,6 @@ color:white;}</string>
          </widget>
          <widget class="QWidget" name="page_3">
           <layout class="QGridLayout" name="gridLayout_5">
-           <item row="0" column="0">
-            <widget class="QSplitter" name="splitter_6">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <widget class="QLabel" name="label_4">
-              <property name="styleSheet">
-               <string notr="true">font-size: 28px;
-       font-weight: bold;
-       color: rgb(255, 255, 255);
-       background-color: #FFDAB9;
-       padding: 20px;
-       border-radius: 15px;
-       border: 2px solid #FFFFFF</string>
-              </property>
-              <property name="text">
-               <string>KHO HÀNG</string>
-              </property>
-              <property name="textFormat">
-               <enum>Qt::AutoText</enum>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </widget>
-           </item>
            <item row="1" column="0">
             <widget class="QTableWidget" name="productTable_2">
              <property name="styleSheet">
@@ -1151,6 +1124,33 @@ QTableWidget::item {
                <string>From</string>
               </property>
              </column>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitter_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <widget class="QLabel" name="label_4">
+              <property name="styleSheet">
+               <string notr="true">font-size: 28px;
+       font-weight: bold;
+       color: rgb(255, 255, 255);
+       background-color: #FFDAB9;
+       padding: 20px;
+       border-radius: 15px;
+       border: 2px solid #FFFFFF</string>
+              </property>
+              <property name="text">
+               <string>KHO HÀNG</string>
+              </property>
+              <property name="textFormat">
+               <enum>Qt::AutoText</enum>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
             </widget>
            </item>
            <item row="2" column="0">
@@ -1237,15 +1237,6 @@ color:white;}
                  <property name="title">
                   <string>Biểu Đồ Doanh Thu</string>
                  </property>
-                 <layout class="QGridLayout" name="gridLayout_2">
-                  <item row="0" column="0">
-                   <widget class="QChartView" name="chartView" native="true">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
                 </widget>
                </item>
               </layout>
@@ -1268,15 +1259,6 @@ color:white;}
                  <property name="title">
                   <string>Lợi nhuận</string>
                  </property>
-                 <layout class="QGridLayout" name="gridLayout_3">
-                  <item row="0" column="0">
-                   <widget class="QChartView" name="chartView_2" native="true">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: rgb(255, 255, 255);</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
                 </widget>
                </item>
               </layout>
@@ -1480,13 +1462,6 @@ QTableWidget::item {
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QChartView</class>
-   <extends>QWidget</extends>
-   <header>qchartview.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections>
   <connection>

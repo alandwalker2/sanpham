@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>LoginDialog</class>
- <widget class="QDialog" name="LoginDialog">
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>764</width>
-    <height>542</height>
+    <height>638</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,20 +18,20 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog#LoginDialog {
-    background-image: url(D:\Desktop\APP\sanphamhinh-anh-cac-mon-an-ngon-nhan-lam-theo-yeu-cau-rieng.jpg);
+    background-image: url(:/background/hinh-anh-cac-mon-an-ngon-nhan-lam-theo-yeu-cau-rieng.jpg);
     background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
-background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }</string>
   </property>
   <widget class="QFrame" name="loginFrame">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>200</y>
-     <width>211</width>
-     <height>251</height>
+     <x>290</x>
+     <y>230</y>
+     <width>221</width>
+     <height>221</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -43,8 +43,8 @@ background-size: cover;
    <property name="frameShadow">
     <enum>QFrame::Sunken</enum>
    </property>
-   <layout class="QVBoxLayout" name="frameLayout">
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <widget class="QLineEdit" name="usernameLineEdit">
       <property name="styleSheet">
        <string notr="true">border: 1px solid #ccc; border-radius: 5px; padding: 5px; background-color: #f9f9f9;</string>
@@ -54,7 +54,17 @@ background-size: cover;
       </property>
      </widget>
     </item>
-    <item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="createAccountButton">
+      <property name="styleSheet">
+       <string notr="true">color: #007bff; border: none; background: none; text-decoration: underline;</string>
+      </property>
+      <property name="text">
+       <string>Tạo tài khoản mới</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
      <widget class="QLineEdit" name="passwordLineEdit">
       <property name="styleSheet">
        <string notr="true">border: 1px solid #ccc; border-radius: 5px; padding: 5px; background-color: #f9f9f9;</string>
@@ -67,17 +77,7 @@ background-size: cover;
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="loginButton">
-      <property name="styleSheet">
-       <string notr="true">background-color: #ff6600; color: white; border-radius: 5px; padding: 10px;</string>
-      </property>
-      <property name="text">
-       <string>Đăng nhập</string>
-      </property>
-     </widget>
-    </item>
-    <item>
+    <item row="3" column="0">
      <widget class="QPushButton" name="forgotPasswordButton">
       <property name="styleSheet">
        <string notr="true">color: #007bff; border: none; background: none; text-decoration: underline;</string>
@@ -87,13 +87,13 @@ background-size: cover;
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="createAccountButton">
+    <item row="2" column="0">
+     <widget class="QPushButton" name="loginButton">
       <property name="styleSheet">
-       <string notr="true">color: #007bff; border: none; background: none; text-decoration: underline;</string>
+       <string notr="true">background-color: #ff6600; color: white; border-radius: 5px; padding: 10px;</string>
       </property>
       <property name="text">
-       <string>Tạo tài khoản mới</string>
+       <string>Đăng nhập</string>
       </property>
      </widget>
     </item>
