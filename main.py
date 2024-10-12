@@ -7,7 +7,7 @@ from PyQt6.QtWidgets import QApplication,QDialog
 class HomeWindow(QMainWindow):
     def __init__(self):
         super(HomeWindow, self).__init__()
-        loadUi("menu.ui", self)
+        loadUi("dangki.ui", self)
 
         
     
