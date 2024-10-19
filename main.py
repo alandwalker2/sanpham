@@ -1,14 +1,15 @@
 
 import sys
 from PyQt6.uic import loadUi
+from PyQt6 import uic, QtWidgets
 from PyQt6.QtWidgets import *
 from PyQt6.QtWidgets import QApplication,QDialog
 from PyQt6.QtWidgets import QApplication,QMainWindow,QPushButton,QMessageBox,QCheckBox
 from PyQt6 import QtWidgets,QtGui, QtCore
 
-class LOgin(QMainWindow):
+class Login(QMainWindow):
     def __init__(self):
-        super(LOgin, self).__init__()
+        super(Login, self).__init__()
         loadUi("dangnhap.ui", self)
         self.btlogin_2.clicked.connect(self.login)
         self.btregister33.clicked.connect(self.showregister)
@@ -115,14 +116,37 @@ class Register3(QtWidgets.QMainWindow):
 class Main(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        loadUi("menu.ui", self)
-# Define the main function
+        uic.loadUi('menu.ui', self)
+
+     #menu
+
+            
+        self.logout1.clicked.connect(lambda:self.close())
+        self.logout2.clicked.connect(lambda:self.close())
+
+        self.home1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(0))
+        self.home2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(0))
+
+        self.sell1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(1))
+        self.sell2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(1))
+
+        self.product1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(2))
+        self.product2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(2))
+
+        self.stat1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(3))
+        self.stat2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(3))
+
+        self.cus1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(4))
+        self.cus2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(4))
+   
+    
+# # Define the main function
 def main():
     # Create an instance of the QApplication
     app = QApplication(sys.argv)
 
     # Create an instance of the LoginSignUpWindow and show it
-    window = LOgin()
+    window = Login()
     window.show()
 
     
@@ -130,7 +154,7 @@ def main():
 # Call the main function
 if __name__== '__main__':
     app=QApplication(sys.argv) 
-    dangnhap =LOgin()
+    dangnhap =Login()
     dangnhap.show()
     dangki=Register3()
     menu=Main()
