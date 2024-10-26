@@ -6,7 +6,7 @@ from PyQt6.QtWidgets import *
 from PyQt6.QtWidgets import QApplication,QDialog
 from PyQt6.QtWidgets import QApplication,QMainWindow,QPushButton,QMessageBox,QCheckBox
 from PyQt6 import QtWidgets,QtGui, QtCore
-
+import json
 class Login(QMainWindow):
     def __init__(self):
         super(Login, self).__init__()
@@ -19,6 +19,11 @@ class Login(QMainWindow):
         username=self.usernameLineEdit_2.text()
         email=self.emailLineEdit_3.text()
         password=self.passwordLineEdit_2.text()
+        with open("user.json", "r") as f:
+            acc=json.load(f)
+        
+        
+
         if username =="" or password=="":
             mesageBox = QMessageBox()
             messageBox = QMessageBox()
@@ -28,11 +33,11 @@ class Login(QMainWindow):
             messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
             messageBox.exec()
             return
-        elif username == "hieu" and  email=="hello@gmail.com" and password == "admin" and self.checkBox.isChecked():
+        elif acc["name"] == username and  acc["email"] ==email and acc["password"] == password and self.checkBox.isChecked():
             self.close()
             menu.show()
     
-        elif username != "hieu" or email != "hello@gmail.com" or password != "admin" :
+        elif acc["name"] != username and  acc["email"] != email and acc["password"] != password :
             messageBox = QMessageBox()
             messageBox.setWindowTitle("Lỗi")
             messageBox.setText("Chưa đúng tài khoản hoặc mật khẩu!")
@@ -64,9 +69,24 @@ class Register3(QtWidgets.QMainWindow):
         self.btRegister.clicked.connect(self.Register)    
     def Register(self):
         self.name = self.fullname.text()
-        email = self.email.text()
-        password = self.password.text()
+        self.email = self.emails.text()
+        self.password = self.passwords.text()
         
+        hoso= { 
+            "name": self.name,
+            "email": self.email,
+            "password": self.password,
+        }
+        
+            
+        with open("user.json", "w") as f:
+                json.dump(hoso,f,indent=4)
+                f.write(",\n") 
+
+        
+
+        
+            
     #Check dang ki
         if not self.name:
             messageBox = QMessageBox()
@@ -76,7 +96,7 @@ class Register3(QtWidgets.QMainWindow):
             messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
             messageBox.exec()
             return
-        if not email: 
+        if not self.email: 
             messageBox = QMessageBox()
             messageBox.setWindowTitle("Lỗi")
             messageBox.setText("Vui lòng nhập email!")
@@ -84,7 +104,7 @@ class Register3(QtWidgets.QMainWindow):
             messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
             messageBox.exec()
             return
-        if not password:
+        if not self.password:
             
             messageBox = QMessageBox()
             messageBox.setWindowTitle("Lỗi")
@@ -140,6 +160,20 @@ class Main(QtWidgets.QMainWindow):
         self.cus2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(4))
    
     
+
+
+    #inventory
+     
+        self.addbt.clicked.connect(self.add)
+        #self.removebt.clicked.connect
+    def add(Self):
+        add.show()
+    
+class ADD(QtWidgets.QMainWindow):
+    def __init__(self):
+        super().__init__()
+        uic.loadUi('add.ui', self)
+
 # # Define the main function
 def main():
     # Create an instance of the QApplication
@@ -158,7 +192,7 @@ if __name__== '__main__':
     dangnhap.show()
     dangki=Register3()
     menu=Main()
-
+    add=ADD()
     sys.exit(app.exec())
 
 

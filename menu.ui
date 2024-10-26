@@ -174,7 +174,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>E:/Downloads/bar-chart-2.svg</normaloff>E:/Downloads/bar-chart-2.svg</iconset>
+             <normaloff>bar-chart-2.svg</normaloff>bar-chart-2.svg</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -356,7 +356,7 @@ QPushButton:checked{
           <string notr="true"/>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="page">
           <layout class="QGridLayout" name="gridLayout_4">
@@ -593,7 +593,7 @@ color:white;}</string>
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>go-back-2.png</normaloff>go-back-2.png</iconset>
+                  <normaloff>C:/Users/HP/.designer/backup/go-back-2.png</normaloff>C:/Users/HP/.designer/backup/go-back-2.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -924,12 +924,12 @@ QTableWidget::item {
              </widget>
             </widget>
            </item>
-           <item row="2" column="0">
+           <item row="3" column="0">
             <widget class="QSplitter" name="splitter_5">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
-             <widget class="QPushButton" name="pushButton_19">
+             <widget class="QPushButton" name="addbt">
               <property name="styleSheet">
                <string notr="true">QPushButton{
 	color:black;
@@ -954,7 +954,7 @@ color:white;}
                <string>ADD</string>
               </property>
              </widget>
-             <widget class="QPushButton" name="pushButton_21">
+             <widget class="QPushButton" name="removebt">
               <property name="styleSheet">
                <string notr="true">QPushButton{
 	color:black;
@@ -995,8 +995,8 @@ color:white;}
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>731</width>
-                <height>394</height>
+                <width>129</width>
+                <height>31</height>
                </rect>
               </property>
               <attribute name="label">
@@ -1017,8 +1017,8 @@ color:white;}
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>731</width>
-                <height>394</height>
+                <width>83</width>
+                <height>31</height>
                </rect>
               </property>
               <attribute name="label">
@@ -1039,7 +1039,7 @@ color:white;}
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>731</width>
+                <width>760</width>
                 <height>394</height>
                </rect>
               </property>
@@ -1294,7 +1294,7 @@ QPushButton:checked{
             </font>
            </property>
            <property name="text">
-            <string>Sidebar</string>
+            <string>AMS</string>
            </property>
           </widget>
          </item>
@@ -1315,7 +1315,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>home.svg</normaloff>home.svg</iconset>
+             <normaloff>C:/Users/HP/.designer/backup/home.svg</normaloff>C:/Users/HP/.designer/backup/home.svg</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -1338,7 +1338,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>shopping-cart.svg</normaloff>shopping-cart.svg</iconset>
+             <normaloff>C:/Users/HP/.designer/backup/shopping-cart.svg</normaloff>C:/Users/HP/.designer/backup/shopping-cart.svg</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -1361,7 +1361,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>box.svg</normaloff>box.svg</iconset>
+             <normaloff>C:/Users/HP/.designer/backup/box.svg</normaloff>C:/Users/HP/.designer/backup/box.svg</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -1382,10 +1382,6 @@ QPushButton:checked{
            <property name="text">
             <string>Statistics</string>
            </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>bar-chart-2.svg</normaloff>bar-chart-2.svg</iconset>
-           </property>
            <property name="iconSize">
             <size>
              <width>14</width>
@@ -1404,10 +1400,6 @@ QPushButton:checked{
           <widget class="QPushButton" name="cus2">
            <property name="text">
             <string>Customer</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>user-plus.svg</normaloff>user-plus.svg</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -1445,7 +1437,7 @@ QPushButton:checked{
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>log-out.svg</normaloff>log-out.svg</iconset>
+           <normaloff>C:/Users/HP/.designer/backup/log-out.svg</normaloff>C:/Users/HP/.designer/backup/log-out.svg</iconset>
          </property>
          <property name="iconSize">
           <size>
