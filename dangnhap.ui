@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1018</width>
-    <height>726</height>
+    <height>708</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -198,7 +198,8 @@ background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">font: 12pt &quot;Bahnschrift&quot;;
-color: #575556;</string>
+color: rgb(255, 255, 255);
+</string>
                </property>
                <property name="text">
                 <string>Full name</string>
@@ -225,7 +226,7 @@ color: #575556;</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">font: 12pt &quot;Bahnschrift&quot;;
-color: #575556;</string>
+color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>Email</string>
@@ -258,7 +259,7 @@ color: #575556;</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">font: 12pt &quot;Bahnschrift&quot;;
-color: #575556;</string>
+color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
                 <string>Password</string>
@@ -342,8 +343,16 @@ color:white;}</string>
                 <widget class="QLabel" name="label_3">
                  <property name="font">
                   <font>
+                   <family>Bahnschrift</family>
                    <pointsize>12</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
                   </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 12pt &quot;Bahnschrift&quot;;
+color: rgb(255, 255, 255);</string>
                  </property>
                  <property name="text">
                   <string>No account</string>

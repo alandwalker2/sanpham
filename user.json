@@ -13,5 +13,20 @@
     "name": "a",
     "email": "a",
     "password": "a"
+  },
+  {
+    "name": "hieu",
+    "email": "gg",
+    "password": "12345"
+  },
+  {
+    "name": "hieu",
+    "email": "123",
+    "password": "123"
+  },
+  {
+    "name": "hieu",
+    "email": "123",
+    "password": "123"
   }
 ]

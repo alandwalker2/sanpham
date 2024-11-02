@@ -33,18 +33,20 @@ class Login(QMainWindow):
             messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
             messageBox.exec()
             return
-        elif acc["name"] == username and  acc["email"] ==email and acc["password"] == password and self.checkBox.isChecked():
-            self.close()
-            menu.show()
+        for account in acc:
+            if account["name"] == username and account["email"] == email and account["password"] == password and self.checkBox.isChecked():
+                self.close()
+                menu.show()
+                return
     
-        elif acc["name"] != username and  acc["email"] != email and acc["password"] != password :
-            messageBox = QMessageBox()
-            messageBox.setWindowTitle("Lỗi")
-            messageBox.setText("Chưa đúng tài khoản hoặc mật khẩu!")
-            messageBox.setIcon( QMessageBox.Icon.Warning)
-            messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
-            messageBox.exec()
-            return
+            elif account["name"] != username and  account["email"] != email and account["password"] != password :
+                messageBox = QMessageBox()
+                messageBox.setWindowTitle("Lỗi")
+                messageBox.setText("Chưa đúng tài khoản hoặc mật khẩu!")
+                messageBox.setIcon( QMessageBox.Icon.Warning)
+                messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
+                messageBox.exec()
+                return
         if not  self.checkBox.isChecked() :
             messageBox = QMessageBox()
             messageBox.setWindowTitle("Lỗi")
@@ -178,12 +180,24 @@ class Main(QtWidgets.QMainWindow):
 
 
     #inventory
-     
         self.addbt.clicked.connect(self.add)
-        #self.removebt.clicked.connect
+        
+    def to_table(self, table_widget, file_path):
+        # Load data from JSON
+        with open(file_path, "r") as f:
+            data = json.load(f)
+
+        #lOix
+
+        
+        
+    
+        for row, item in enumerate(data):
+            for col, (key, value) in enumerate(item.items()):
+                table_widget.setItem(row, col, QTableWidgetItem(str(value)))
+        
     def add(Self):
         add.show()
-    
 class ADD(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
