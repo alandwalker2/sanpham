@@ -1,5 +1,17 @@
-{
-    "name": "ga",
-    "email": "non",
-    "password": "ga"
-}
+[
+  {
+    "name": "a",
+    "email": "a",
+    "password": "a"
+  },
+  {
+    "name": "a",
+    "email": "a",
+    "password": "a"
+  },
+  {
+    "name": "a",
+    "email": "a",
+    "password": "a"
+  }
+]

@@ -79,10 +79,25 @@ class Register3(QtWidgets.QMainWindow):
         }
         
             
-        with open("user.json", "w") as f:
-                json.dump(hoso,f,indent=4)
-                f.write(",\n") 
-
+       # Read JSON file
+        with open("user.json") as fp:
+            listObj = json.load(fp)
+        
+        # Verify existing list
+        print(listObj)
+        print(type(listObj))
+        
+        listObj.append(hoso)
+        
+        # Verify updated list
+        print(listObj)
+        
+        with open("user.json", 'w') as json_file:
+            json.dump(listObj, json_file, 
+                                indent=2,  
+                                separators=(',',': '))
+        
+        print('Successfully appended to the JSON file')
         
 
         

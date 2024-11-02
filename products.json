@@ -5,7 +5,7 @@
             "id":1,
             "name":"Bim bim",
             "import":"Nha cung cap 1",
-            "invebtory":"100",
+            "inventory":"100",
             "HSD":"25-12-2024",
             "NSX":"25-10-2024",
             "price":"5000"
@@ -14,7 +14,7 @@
             "id":2,
             "name":"Bim bim",
             "import":"Nha cung cap 1",
-            "invebtory":"100",
+            "inventory":"100",
             "HSD":"25-12-2024",
             "NSX":"25-10-2024",
             "price":"5000"
