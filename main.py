@@ -182,26 +182,66 @@ class Main(QtWidgets.QMainWindow):
     #inventory
         self.addbt.clicked.connect(self.add)
         
+        
     def to_table(self, table_widget, file_path):
         # Load data from JSON
-        with open(file_path, "r") as f:
+        with open("products.json", "r") as f:
             data = json.load(f)
-
-        #lOix
-
-        
-        
     
-        for row, item in enumerate(data):
-            for col, (key, value) in enumerate(item.items()):
-                table_widget.setItem(row, col, QTableWidgetItem(str(value)))
+        
+        # Display the updated products list in the QTableWidget
+        self.update_table()
+
+    def update_table(self):
+        # Set the number of rows in the table to match the number of products
+        self.tableWidget.setRowCount(len(self.products))
+        
+        for row, product in enumerate(self.products):
+            self.tableWidget.setItem(row, 0, QTableWidgetItem(product['name']))
+            self.tableWidget.setItem(row, 1, QTableWidgetItem(product['price']))
         
     def add(Self):
         add.show()
 class ADD(QtWidgets.QMainWindow):
+    def write_json(self, new_data):
+        with open('products.json','a') as file:
+            # First we load existing data into a dict.
+            file_data = json.load(file)
+            # Join new_data with file_data inside emp_details
+            file_data["data"].append(new_data)
+            # Sets file's current position at offset.
+            file.seek(0)
+            # convert back to json.
+            json.dump(file_data, file, indent = 4)
     def __init__(self):
         super().__init__()
         uic.loadUi('add.ui', self)
+        
+    
+        self.pushButton.clicked.connect(lambda:self.add_product())
+        # Retrieve input fields from the UI (assuming line edits are named productName, productPrice, etc.)
+       
+
+    def add_product(self):
+        self.product_name = self.name.text()
+        self.product_price = self.Price.text()
+        self.product_import= self.import_2.text()
+        self.product_NSX = self.NSX.text()
+        self.product_HSD= self.HSD.text()
+        self.product_quantity=self.quantity.text()
+        
+        # Append new product data to the list
+        product_data = {"name":self.product_name,
+        "import":self.product_import,
+        "inventory":self.product_quantity,
+        "HSD":self.product_HSD,
+        "NSX": self.product_NSX,
+        "price":self.product_price
+
+        }
+        self.write_json(product_data) 
+
+                        
 
 # # Define the main function
 def main():

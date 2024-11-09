@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>976</width>
-    <height>0</height>
+    <width>947</width>
+    <height>786</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -102,7 +102,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>E:/Downloads/home.svg</normaloff>E:/Downloads/home.svg</iconset>
+             <normaloff>home.png</normaloff>home.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -125,7 +125,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>E:/Downloads/shopping-cart.svg</normaloff>E:/Downloads/shopping-cart.svg</iconset>
+             <normaloff>shopping-cart.png</normaloff>shopping-cart.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -151,7 +151,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>E:/Downloads/box.svg</normaloff>E:/Downloads/box.svg</iconset>
+             <normaloff>box.svg</normaloff>box.svg</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -174,7 +174,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>bar-chart-2.svg</normaloff>bar-chart-2.svg</iconset>
+             <normaloff>bar-chart-2.png</normaloff>bar-chart-2.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -197,7 +197,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>user-plus.svg</normaloff>user-plus.svg</iconset>
+             <normaloff>user (1).png</normaloff>user (1).png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -235,7 +235,7 @@ QPushButton:checked{
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>log-out.svg</normaloff>log-out.svg</iconset>
+           <normaloff>log-out.png</normaloff>log-out.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -317,7 +317,7 @@ QPushButton:checked{
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>search.svg</normaloff>search.svg</iconset>
+                <normaloff>search.png</normaloff>search.png</iconset>
               </property>
              </widget>
             </item>
@@ -391,7 +391,7 @@ color:white;}</string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>bar-chart-2.svg</normaloff>bar-chart-2.svg</iconset>
+                <normaloff>bar-chart-2.png</normaloff>bar-chart-2.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -444,7 +444,7 @@ color:white;}</string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>shopping-cart.svg</normaloff>shopping-cart.svg</iconset>
+                <normaloff>shopping-cart.png</normaloff>shopping-cart.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -491,7 +491,7 @@ color:white;}</string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>user (1).svg</normaloff>user (1).svg</iconset>
+                <normaloff>user (1).png</normaloff>user (1).png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -535,7 +535,7 @@ color:white;}</string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>box.svg</normaloff>box.svg</iconset>
+                <normaloff>box.png</normaloff>box.png</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -988,15 +988,15 @@ color:white;}
            <item row="0" column="0" rowspan="2" colspan="2">
             <widget class="QToolBox" name="toolBox">
              <property name="currentIndex">
-              <number>2</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="page_6">
               <property name="geometry">
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>129</width>
-                <height>31</height>
+                <width>731</width>
+                <height>584</height>
                </rect>
               </property>
               <attribute name="label">
@@ -1039,8 +1039,8 @@ color:white;}
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>760</width>
-                <height>394</height>
+                <width>731</width>
+                <height>585</height>
                </rect>
               </property>
               <attribute name="label">
@@ -1315,7 +1315,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>C:/Users/HP/.designer/backup/home.svg</normaloff>C:/Users/HP/.designer/backup/home.svg</iconset>
+             <normaloff>home.png</normaloff>home.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -1338,7 +1338,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>C:/Users/HP/.designer/backup/shopping-cart.svg</normaloff>C:/Users/HP/.designer/backup/shopping-cart.svg</iconset>
+             <normaloff>shopping-cart.png</normaloff>shopping-cart.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -1361,7 +1361,7 @@ QPushButton:checked{
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>C:/Users/HP/.designer/backup/box.svg</normaloff>C:/Users/HP/.designer/backup/box.svg</iconset>
+             <normaloff>box.png</normaloff>box.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -1382,6 +1382,10 @@ QPushButton:checked{
            <property name="text">
             <string>Statistics</string>
            </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>bar-chart-2.png</normaloff>bar-chart-2.png</iconset>
+           </property>
            <property name="iconSize">
             <size>
              <width>14</width>
@@ -1400,6 +1404,10 @@ QPushButton:checked{
           <widget class="QPushButton" name="cus2">
            <property name="text">
             <string>Customer</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>user (1).png</normaloff>user (1).png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -1437,7 +1445,7 @@ QPushButton:checked{
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>C:/Users/HP/.designer/backup/log-out.svg</normaloff>C:/Users/HP/.designer/backup/log-out.svg</iconset>
+           <normaloff>log-out.png</normaloff>log-out.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -1457,7 +1465,7 @@ QPushButton:checked{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>976</width>
+     <width>947</width>
      <height>21</height>
     </rect>
    </property>
@@ -1473,8 +1481,8 @@ QPushButton:checked{
    <slot>setVisible(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>242</x>
-     <y>61</y>
+     <x>225</x>
+     <y>63</y>
     </hint>
     <hint type="destinationlabel">
      <x>36</x>
@@ -1489,8 +1497,8 @@ QPushButton:checked{
    <slot>setHidden(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>234</x>
-     <y>52</y>
+     <x>225</x>
+     <y>63</y>
     </hint>
     <hint type="destinationlabel">
      <x>176</x>
@@ -1521,12 +1529,12 @@ QPushButton:checked{
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>47</x>
-     <y>139</y>
+     <x>57</x>
+     <y>181</y>
     </hint>
     <hint type="destinationlabel">
-     <x>122</x>
-     <y>134</y>
+     <x>181</x>
+     <y>181</y>
     </hint>
    </hints>
   </connection>
@@ -1537,12 +1545,12 @@ QPushButton:checked{
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>157</y>
+     <x>53</x>
+     <y>226</y>
     </hint>
     <hint type="destinationlabel">
-     <x>110</x>
-     <y>159</y>
+     <x>181</x>
+     <y>226</y>
     </hint>
    </hints>
   </connection>
@@ -1553,12 +1561,12 @@ QPushButton:checked{
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>37</x>
-     <y>189</y>
+     <x>47</x>
+     <y>271</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
-     <y>179</y>
+     <x>181</x>
+     <y>271</y>
     </hint>
    </hints>
   </connection>
@@ -1569,12 +1577,12 @@ QPushButton:checked{
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>36</x>
-     <y>229</y>
+     <x>46</x>
+     <y>316</y>
     </hint>
     <hint type="destinationlabel">
-     <x>133</x>
-     <y>201</y>
+     <x>181</x>
+     <y>316</y>
     </hint>
    </hints>
   </connection>
@@ -1601,12 +1609,12 @@ QPushButton:checked{
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>144</x>
-     <y>129</y>
+     <x>181</x>
+     <y>181</y>
     </hint>
     <hint type="destinationlabel">
-     <x>43</x>
-     <y>134</y>
+     <x>53</x>
+     <y>181</y>
     </hint>
    </hints>
   </connection>
@@ -1617,12 +1625,12 @@ QPushButton:checked{
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>117</x>
-     <y>152</y>
+     <x>181</x>
+     <y>226</y>
     </hint>
     <hint type="destinationlabel">
-     <x>40</x>
-     <y>160</y>
+     <x>50</x>
+     <y>226</y>
     </hint>
    </hints>
   </connection>
@@ -1633,12 +1641,12 @@ QPushButton:checked{
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>131</x>
-     <y>178</y>
+     <x>181</x>
+     <y>271</y>
     </hint>
     <hint type="destinationlabel">
-     <x>44</x>
-     <y>194</y>
+     <x>54</x>
+     <y>271</y>
     </hint>
    </hints>
   </connection>
@@ -1649,12 +1657,12 @@ QPushButton:checked{
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>161</x>
-     <y>201</y>
+     <x>181</x>
+     <y>316</y>
     </hint>
     <hint type="destinationlabel">
-     <x>37</x>
-     <y>221</y>
+     <x>47</x>
+     <y>316</y>
     </hint>
    </hints>
   </connection>
