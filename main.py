@@ -1,267 +1,205 @@
-
 import sys
-from PyQt6.uic import loadUi
-from PyQt6 import uic, QtWidgets
-from PyQt6.QtWidgets import *
-from PyQt6.QtWidgets import QApplication,QDialog
-from PyQt6.QtWidgets import QApplication,QMainWindow,QPushButton,QMessageBox,QCheckBox
-from PyQt6 import QtWidgets,QtGui, QtCore
 import json
+from PyQt6.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableWidgetItem
+from PyQt6 import uic, QtCore
+
 class Login(QMainWindow):
     def __init__(self):
-        super(Login, self).__init__()
-        loadUi("dangnhap.ui", self)
+        super().__init__()
+        uic.loadUi("dangnhap.ui", self)
         self.btlogin_2.clicked.connect(self.login)
-        self.btregister33.clicked.connect(self.showregister)
+        self.btregister33.clicked.connect(self.show_register)
 
-#Check login   
     def login(self):
-        username=self.usernameLineEdit_2.text()
-        email=self.emailLineEdit_3.text()
-        password=self.passwordLineEdit_2.text()
-        with open("user.json", "r") as f:
-            acc=json.load(f)
-        
-        
+        username = self.usernameLineEdit_2.text()
+        email = self.emailLineEdit_3.text()
+        password = self.passwordLineEdit_2.text()
 
-        if username =="" or password=="":
-            mesageBox = QMessageBox()
-            messageBox = QMessageBox()
-            mesageBox.setWindowTitle("Lỗi")
-            messageBox.setText("Thiếu dữ liệu")
-            messageBox.setIcon( QMessageBox.Icon.Warning)
-            messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
-            messageBox.exec()
+        if not username or not password:
+            self.show_message("Lỗi", "Thiếu dữ liệu", QMessageBox.Icon.Warning)
             return
-        for account in acc:
-            if account["name"] == username and account["email"] == email and account["password"] == password and self.checkBox.isChecked():
+
+        with open("user.json", "r") as f:
+            accounts = json.load(f)
+
+        for account in accounts:
+            if account["name"] == username and account["email"] == email and account["password"] == password:
+                if not self.checkBox.isChecked():
+                    self.show_message("Lỗi", "Hãy đồng ý các điều khoản!", QMessageBox.Icon.Warning)
+                    return
                 self.close()
                 menu.show()
                 return
-    
-            elif account["name"] != username and  account["email"] != email and account["password"] != password :
-                messageBox = QMessageBox()
-                messageBox.setWindowTitle("Lỗi")
-                messageBox.setText("Chưa đúng tài khoản hoặc mật khẩu!")
-                messageBox.setIcon( QMessageBox.Icon.Warning)
-                messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
-                messageBox.exec()
-                return
-        if not  self.checkBox.isChecked() :
-            messageBox = QMessageBox()
-            messageBox.setWindowTitle("Lỗi")
-            messageBox.setText("Hãy đồng ý các điều khoản!")
-            messageBox.setIcon( QMessageBox.Icon.Warning)
-            messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
-            messageBox.exec()
-            return
-    def showMainWindow(self):
-        menu.show()
+
+        self.show_message("Lỗi", "Sai tài khoản hoặc mật khẩu!", QMessageBox.Icon.Warning)
+
+    def show_register(self):
         self.close()
-    def showregister(self):
-        dangki.show()
-        self.close()
-#Trang dang ki
-class Register3(QtWidgets.QMainWindow):
+        register.show()
+
+    @staticmethod
+    def show_message(title, text, icon):
+        message_box = QMessageBox()
+        message_box.setWindowTitle(title)
+        message_box.setText(text)
+        message_box.setIcon(icon)
+        message_box.setStyleSheet("background-color:#f8f8f8;color:blue")
+        message_box.exec()
+
+
+class Register(QMainWindow):
     def __init__(self):
         super().__init__()
-        loadUi("dangki.ui", self)
-        self.name = ""
-        self.btlogin.clicked.connect(self.showlogin)
-        self.btRegister.clicked.connect(self.Register)    
-    def Register(self):
-        self.name = self.fullname.text()
-        self.email = self.emails.text()
-        self.password = self.passwords.text()
-        
-        hoso= { 
-            "name": self.name,
-            "email": self.email,
-            "password": self.password,
-        }
-        
-            
-       # Read JSON file
-        with open("user.json") as fp:
-            listObj = json.load(fp)
-        
-        # Verify existing list
-        print(listObj)
-        print(type(listObj))
-        
-        listObj.append(hoso)
-        
-        # Verify updated list
-        print(listObj)
-        
-        with open("user.json", 'w') as json_file:
-            json.dump(listObj, json_file, 
-                                indent=2,  
-                                separators=(',',': '))
-        
-        print('Successfully appended to the JSON file')
-        
+        uic.loadUi("dangki.ui", self)
+        self.btlogin.clicked.connect(self.show_login)
+        self.btRegister.clicked.connect(self.register_user)
 
-        
-            
-    #Check dang ki
-        if not self.name:
-            messageBox = QMessageBox()
-            messageBox.setWindowTitle("Lỗi")
-            messageBox.setText("Vui lòng nhập tên!")
-            messageBox.setqIcon( QMessageBox.Icon.Warning)
-            messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
-            messageBox.exec()
+    def register_user(self):
+        name = self.fullname.text()
+        email = self.emails.text()
+        password = self.passwords.text()
+
+        if not name:
+            self.show_message("Lỗi", "Vui lòng nhập tên!", QMessageBox.Icon.Warning)
             return
-        if not self.email: 
-            messageBox = QMessageBox()
-            messageBox.setWindowTitle("Lỗi")
-            messageBox.setText("Vui lòng nhập email!")
-            messageBox.setIcon( QMessageBox.Icon.Warning)
-            messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
-            messageBox.exec()
+        if not email:
+            self.show_message("Lỗi", "Vui lòng nhập email!", QMessageBox.Icon.Warning)
             return
-        if not self.password:
-            
-            messageBox = QMessageBox()
-            messageBox.setWindowTitle("Lỗi")
-            messageBox.setText("Vui lòng nhập mật khẩu!")
-            messageBox.setIcon( QMessageBox.Icon.Warning)
-            messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
-            messageBox.exec()
+        if not password:
+            self.show_message("Lỗi", "Vui lòng nhập mật khẩu!", QMessageBox.Icon.Warning)
             return
         if not self.checkBox.isChecked():
-            
-            messageBox = QMessageBox()
-            messageBox.setWindowTitle("Lỗi")
-            messageBox.setText("Vui lòng đồng ý các điều khoản!")
-            messageBox.setIcon( QMessageBox.Icon.Warning)
-            messageBox.setStyleSheet("background-color:#f8f8f8;color:blue")
-            messageBox.exec()
+            self.show_message("Lỗi", "Vui lòng đồng ý các điều khoản!", QMessageBox.Icon.Warning)
             return
-        
+
+        user_data = {"name": name, "email": email, "password": password}
+
+        with open("user.json", "r+") as f:
+            users = json.load(f)
+            users.append(user_data)
+            f.seek(0)
+            json.dump(users, f, indent=2)
+
+        self.close()
         menu.show()
+
+    def show_login(self):
         self.close()
-    
-    def showlogin(self):
-        dangnhap.show()
-        self.close()
-    def showMainWindow(self):
-        menu.show()
-        self.close()
-#trang main
-class Main(QtWidgets.QMainWindow):
+        login.show()
+
+    @staticmethod
+    def show_message(title, text, icon):
+        message_box = QMessageBox()
+        message_box.setWindowTitle(title)
+        message_box.setText(text)
+        message_box.setIcon(icon)
+        message_box.setStyleSheet("background-color:#f8f8f8;color:blue")
+        message_box.exec()
+
+
+class Main(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('menu.ui', self)
+        uic.loadUi("menu.ui", self)
+        self.logout1.clicked.connect(self.close)
+        self.logout2.clicked.connect(self.close)
 
-     #menu
-
-            
-        self.logout1.clicked.connect(lambda:self.close())
-        self.logout2.clicked.connect(lambda:self.close())
-
+        # Navigation Buttons
         self.home1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(0))
         self.home2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(0))
-
         self.sell1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(1))
         self.sell2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(1))
-
         self.product1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(2))
         self.product2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(2))
-
         self.stat1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(3))
         self.stat2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(3))
-
         self.cus1.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(4))
         self.cus2.clicked.connect(lambda: self.stackedWidget11.setCurrentIndex(4))
-   
-    
 
+        # Add button to open ADD window
+        self.addbt.clicked.connect(self.open_add_window)
 
-    #inventory
-        self.addbt.clicked.connect(self.add)
-        
-        
-    def to_table(self, table_widget, file_path):
-        # Load data from JSON
-        with open("products.json", "r") as f:
-            data = json.load(f)
-    
-        
-        # Display the updated products list in the QTableWidget
-        self.update_table()
+        # Load initial table data
+        self.load_table_data()
 
-    def update_table(self):
-        # Set the number of rows in the table to match the number of products
+    def load_table_data(self):
+        try:
+            with open("products.json", "r") as f:
+                data = json.load(f)
+                self.products = data.get("data", [])
+            self.populate_table()
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            self.show_message("Error", f"Failed to load products: {e}", QMessageBox.Icon.Critical)
+
+    def populate_table(self):
         self.tableWidget.setRowCount(len(self.products))
-        
         for row, product in enumerate(self.products):
-            self.tableWidget.setItem(row, 0, QTableWidgetItem(product['name']))
-            self.tableWidget.setItem(row, 1, QTableWidgetItem(product['price']))
-        
-    def add(Self):
-        add.show()
-class ADD(QtWidgets.QMainWindow):
-    def write_json(self, new_data):
-        with open('products.json','a') as file:
-            # First we load existing data into a dict.
-            file_data = json.load(file)
-            # Join new_data with file_data inside emp_details
-            file_data["data"].append(new_data)
-            # Sets file's current position at offset.
-            file.seek(0)
-            # convert back to json.
-            json.dump(file_data, file, indent = 4)
+            self.tableWidget.setItem(row, 0, QTableWidgetItem(product["name"]))
+            self.tableWidget.setItem(row, 1, QTableWidgetItem(product["price"]))
+
+    def open_add_window(self):
+        self.add_window = ADD()
+        self.add_window.data_added.connect(self.load_table_data)
+        self.add_window.show()
+
+    @staticmethod
+    def show_message(title, text, icon):
+        message_box = QMessageBox()
+        message_box.setWindowTitle(title)
+        message_box.setText(text)
+        message_box.setIcon(icon)
+        message_box.exec()
+
+
+class ADD(QMainWindow):
+    data_added = QtCore.pyqtSignal()
+
     def __init__(self):
         super().__init__()
-        uic.loadUi('add.ui', self)
-        
-    
-        self.pushButton.clicked.connect(lambda:self.add_product())
-        # Retrieve input fields from the UI (assuming line edits are named productName, productPrice, etc.)
-       
+        uic.loadUi("add.ui", self)
+        self.pushButton.clicked.connect(self.add_product)
 
     def add_product(self):
-        self.product_name = self.name.text()
-        self.product_price = self.Price.text()
-        self.product_import= self.import_2.text()
-        self.product_NSX = self.NSX.text()
-        self.product_HSD= self.HSD.text()
-        self.product_quantity=self.quantity.text()
-        
-        # Append new product data to the list
-        product_data = {"name":self.product_name,
-        "import":self.product_import,
-        "inventory":self.product_quantity,
-        "HSD":self.product_HSD,
-        "NSX": self.product_NSX,
-        "price":self.product_price
-
+        product_data = {
+            "name": self.name.text(),
+            "import": self.import_2.text(),
+            "inventory": self.quantity.text(),
+            "HSD": self.HSD.text(),
+            "NSX": self.NSX.text(),
+            "price": self.Price.text()
         }
-        self.write_json(product_data) 
+        self.save_product(product_data)
+        self.close()
 
-                        
+    def save_product(self, product_data):
+        try:
+            with open("products.json", "r+") as f:
+                file_data = json.load(f)
+                file_data["data"].append(product_data)
+                f.seek(0)
+                json.dump(file_data, f, indent=4)
+            self.data_added.emit()
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            self.show_message("Error", f"Failed to save product: {e}", QMessageBox.Icon.Critical)
 
-# # Define the main function
+    @staticmethod
+    def show_message(title, text, icon):
+        message_box = QMessageBox()
+        message_box.setWindowTitle(title)
+        message_box.setText(text)
+        message_box.setIcon(icon)
+        message_box.exec()
+
+
 def main():
-    # Create an instance of the QApplication
     app = QApplication(sys.argv)
-
-    # Create an instance of the LoginSignUpWindow and show it
-    window = Login()
-    window.show()
-
-    
-
-# Call the main function
-if __name__== '__main__':
-    app=QApplication(sys.argv) 
-    dangnhap =Login()
-    dangnhap.show()
-    dangki=Register3()
-    menu=Main()
-    add=ADD()
+    global login, register, menu
+    login = Login()
+    register = Register()
+    menu = Main()
+    login.show()
     sys.exit(app.exec())
 
 
+if __name__ == "__main__":
+    main()
