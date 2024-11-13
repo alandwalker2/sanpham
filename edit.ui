@@ -64,7 +64,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Name</string>
+           <string>Full name</string>
           </property>
          </widget>
         </item>
@@ -118,7 +118,7 @@ border-style: solid;border-width: 2px;border-color: black
            </font>
           </property>
           <property name="text">
-           <string>Supplier</string>
+           <string>Import</string>
           </property>
          </widget>
         </item>
@@ -172,7 +172,7 @@ border-style: solid;border-width: 2px;border-color: black
            </font>
           </property>
           <property name="text">
-           <string>Manufacrure Darte</string>
+           <string>Manufacture Date</string>
           </property>
          </widget>
         </item>
@@ -328,7 +328,7 @@ border-style: solid;border-width: 2px;border-color: black
            </font>
           </property>
           <property name="text">
-           <string>quantity</string>
+           <string>Quantity</string>
           </property>
          </widget>
         </item>
