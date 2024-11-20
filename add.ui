@@ -37,6 +37,9 @@
       <property name="text">
        <string>Add New Product</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
     </item>
     <item>

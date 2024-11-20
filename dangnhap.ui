@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1018</width>
+    <width>833</width>
     <height>708</height>
    </rect>
   </property>
@@ -36,7 +36,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>hinh-anh-cac-mon-an-ngon-nhan-lam-theo-yeu-cau-rieng.jpg</pixmap>
+       <pixmap>C:/Users/HP/.designer/backup/hinh-anh-cac-mon-an-ngon-nhan-lam-theo-yeu-cau-rieng.jpg</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -457,7 +457,7 @@ color:white;}
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1018</width>
+     <width>833</width>
      <height>21</height>
     </rect>
    </property>

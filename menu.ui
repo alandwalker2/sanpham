@@ -593,7 +593,7 @@ color:white;}</string>
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../../../../../HP/.designer/backup/go-back-2.png</normaloff>../../../../../HP/.designer/backup/go-back-2.png</iconset>
+                  <normaloff>../../../HP/.designer/backup/go-back-2.png</normaloff>../../../HP/.designer/backup/go-back-2.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -977,31 +977,6 @@ color:white;}
               </property>
               <property name="text">
                <string>ADD</string>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="removebt">
-              <property name="styleSheet">
-               <string notr="true">QPushButton{
-	color:black;
-		background-color: rgb(170, 255, 0);
-	font: 18pt &quot;MS Shell Dlg 2&quot;;
-border-radius:5px;
-border: 2px solid black;  /* Độ dày và màu sắc của viền */
-        border-radius: 5px;       /* Bo góc viền */
-        padding: 5px;  }
-QPushButton:hover{
-	color: rgb(0, 0, 0);
-	
-	background-color: rgb(213, 255, 252);
-  border: 2px solid blue; 
-}
-QPushBotton{
-background-color: rgb(255, 255, 0);
-color:white;}
-</string>
-              </property>
-              <property name="text">
-               <string>REMOVE</string>
               </property>
              </widget>
             </widget>
